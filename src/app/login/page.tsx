@@ -1,11 +1,15 @@
-import Link from "next/link";
+import LoginForm from "@/components/LoginForm";
+import NavBar from "@/components/NavBar";
 
-export default function Hero() {
+
+export default function Login() {
   return (
-    <div className="relative isolate overflow-hidden bg-gray-900 mb-20">
+    <>
+    <NavBar/>
+    <div className="relative isolate overflow-hidden bg-gray-900">
       {/* Background Image */}
       <img
-        src="/landing/hero.jpg"
+        src="/landing/auth.jpg"
         alt=""
         className="absolute inset-0 -z-10 h-full w-full object-cover"
       />
@@ -40,31 +44,12 @@ export default function Hero() {
         </svg>
       </div>
 
+      
 
       <div className="px-6 lg:px-20">
-        
-         <div className="mx-aut max-w-2xl py-32 sm:py-48 lg:py-56">
-           <div className="hidden sm:mb-8 sm:flex sm:justify-center">
-            
-           </div>
-           <div className="">
-             <h1 className="text-5xl font-bold tracking-tight text-white sm:text-6xl">
-               Tap-2-Give
-             </h1>
-             <p className="mt-6 text-3xl leading-8 text-white">
-               Your Self Service Church Giving Platform
-             </p>
-             <div className="mt-10 flex items-center justify-start gap-x-6">
-               <Link
-                 href="/register"
-                 className="rounded-md bg-[#00bf63] px-10 py-1.5 text-xl font-semibold leading-7 text-white shadow-sm hover:bg-green-400 "
-               >
-                 Sign Up
-               </Link>
-             
-             </div>
-           </div>
-         </div>
+        <div className="mx-auto max-w-2xl py-10 sm:py-20 lg:py-32">
+          <LoginForm/>
+        </div>
       </div>
       <div className="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]">
         <svg
@@ -92,6 +77,6 @@ export default function Hero() {
         </svg>
       </div>
     </div>
+    </>
   );
 }
-

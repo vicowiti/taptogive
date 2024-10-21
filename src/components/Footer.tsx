@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const Footer = () => {
   return (
-    <footer className="py-5 bg-white px-20 text-lg font-semibold flex flex-col lg:flex-row justify-between w-full">
+    <footer className="py-5 bg-white lg:px-20 px-5 text-lg font-semibold flex flex-col lg:flex-row justify-between w-full">
       <div className="flex justify-center items-center">
         <Image src="/logo/logo.png" width={100} height={50} alt="logo" />
       </div>

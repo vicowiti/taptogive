@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import { Dialog } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 const navigation = [
   { name: "Home", href: "/" },
@@ -13,6 +14,9 @@ const navigation = [
 
 const NavBar = () => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+    const pathname = usePathname();
+    console.log(pathname);
+    
   return (
     <div className="bg-white h-[80px] lg:h-[100px] px-6  lg:px-8 text-black">
       <nav
@@ -40,13 +44,14 @@ const NavBar = () => {
             <Link
               key={item.name}
               href={item.href}
-              className="text-lg font-semibold leading-6 "
+              className={`text-lg font-semibold leading-6 ${
+                pathname === item.href ? "text-[#00bf63]" : ""
+              }`}
             >
               {item.name}
             </Link>
           ))}
         </div>
-        
       </nav>
       <Dialog as="div" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
         <Dialog.Panel className="fixed inset-0 z-10 overflow-y-auto bg-gray-900 px-6 py-6 lg:hidden">
@@ -75,13 +80,14 @@ const NavBar = () => {
                   <Link
                     key={item.name}
                     href={item.href}
-                    className="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-white hover:bg-gray-400/10"
+                    className={`-mx-3 block rounded-lg py-2 px-3 text-base  font-semibold leading-7 text-white hover:bg-gray-400/10 ${
+                      pathname === item.href ? "text-[#00bf63]" : ""
+                    }`}
                   >
                     {item.name}
                   </Link>
                 ))}
               </div>
-              
             </div>
           </div>
         </Dialog.Panel>

@@ -2,7 +2,7 @@ import React from "react";
 
 const AboutUs = () => {
   return (
-    <div id="about" className="relative bg-gray-900">
+    <div id="about" className="relative bg-gray-900 h-screen">
       <div className="absolute inset-x-0 bottom-0 h-80 xl:top-0 xl:h-full">
         <div className="h-full w-full xl:grid xl:grid-cols-2">
           <div className="h-full xl:relative xl:col-start-2">
