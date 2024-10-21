@@ -57,7 +57,7 @@ export default function Hero() {
              <div className="mt-10 flex items-center justify-start gap-x-6">
                <Link
                  href="/register"
-                 className="rounded-md bg-[#00bf63] px-10 py-1.5 text-xl font-semibold leading-7 text-white shadow-sm hover:bg-green-400 "
+                 className="rounded-md bg-[#00bf63] px-10 py-1.5 text-xl flex justify-center items-center font-semibold leading-7 text-white shadow-sm hover:bg-green-400 "
                >
                  Sign Up
                </Link>
