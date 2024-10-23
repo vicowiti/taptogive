@@ -105,7 +105,7 @@ export default function ContactUs() {
               <div>
                 <button
                   type="submit"
-                  className="inline-flex justify-center rounded-md border border-transparent bg-green-600 py-2 px-6 text-base font-medium text-white shadow-sm "
+                  className="inline-flex justify-center rounded-md border border-transparent bg-gradient-to-r from-green-600 to-[#083D77] py-2 px-6 text-base font-medium text-white shadow-sm "
                 >
                   Submit
                 </button>
