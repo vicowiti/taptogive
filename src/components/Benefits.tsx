@@ -1,10 +1,8 @@
-import { FaChurch } from "react-icons/fa";
-import { GrStatusUnknown } from "react-icons/gr";
-import { IoPeople } from "react-icons/io5";
+
 
 const posts = [
   {
-    icon: FaChurch,
+    icon: "/give.jpg",
     title: "Streamlined Giving",
     href: "#",
     category: { name: "Article", href: "#" },
@@ -21,7 +19,7 @@ const posts = [
     },
   },
   {
-    icon: GrStatusUnknown,
+    icon: "/grow.jpg",
     title: "Know More, Grow More",
     href: "#",
     category: { name: "Video", href: "#" },
@@ -38,7 +36,7 @@ const posts = [
     },
   },
   {
-    icon: IoPeople,
+    icon: "/empower.jpg",
     title: "Empower Every Giving, Every Member",
     href: "#",
     category: { name: "Case Study", href: "#" },
@@ -79,9 +77,9 @@ export default function Benefits() {
               className="flex flex-col overflow-hidden rounded-lg shadow-lg"
             >
               <div className="flex-shrink-0 flex justify-center items-center">
-                <post.icon
+                <img src={post.icon}
                   color="#f9995d"
-                  className="h-48 w-[20%] object-cover"
+                  className="h-48 w-[50%] object-fit"
                 />
               </div>
               <div className="flex flex-1 flex-col justify-between bg-white p-6">

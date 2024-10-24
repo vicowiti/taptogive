@@ -3,26 +3,32 @@ import Link from "next/link";
 export default function Login() {
   return (
     <>
-  
       <div className="flex min-h-screen">
         <div className="flex flex-1 flex-col justify-center py-12 px-4 sm:px-6 lg:flex-none lg:px-20 xl:px-24">
           <div className="mx-auto w-full max-w-sm lg:w-96">
             <Link href="/">
               <img
-                className="h-16 w-auto"
+                className="h-auto w-32"
                 src="/logo/logo.png"
                 alt="TapToGive"
               />
-              <h2 className="mt-6 text-3xl font-bold tracking-tight text-gray-900">Sign up to join the giving revolution!</h2>
-             
+              <h2 className="mt-6 text-3xl text-center font-bold tracking-tight text-gray-900">
+                Ready to experience the future of church giving?
+              </h2>
+              <h2 className="mt-2 text-3xl text-center font-bold tracking-tight text-gray-900">
+                Sign up now!
+              </h2>
             </Link>
 
-            <div className="mt-8">             
+            <div className="mt-8">
               <div className="mt-6">
                 <form action="#" method="POST" className="space-y-6">
                   <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-gray-700">
-                     Church Name
+                    <label
+                      htmlFor="name"
+                      className="block text-sm font-medium text-gray-700"
+                    >
+                      Church Name
                     </label>
                     <div className="mt-1">
                       <input
@@ -36,7 +42,10 @@ export default function Login() {
                     </div>
                   </div>
                   <div>
-                    <label htmlFor="phone" className="block text-sm font-medium text-gray-700">
+                    <label
+                      htmlFor="phone"
+                      className="block text-sm font-medium text-gray-700"
+                    >
                       Phone Number
                     </label>
                     <div className="mt-1">
@@ -51,7 +60,10 @@ export default function Login() {
                     </div>
                   </div>
                   <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-700">
+                    <label
+                      htmlFor="email"
+                      className="block text-sm font-medium text-gray-700"
+                    >
                       Email address
                     </label>
                     <div className="mt-1">
@@ -67,7 +79,10 @@ export default function Login() {
                   </div>
 
                   <div className="space-y-1">
-                    <label htmlFor="contact" className="block text-sm font-medium text-gray-700">
+                    <label
+                      htmlFor="contact"
+                      className="block text-sm font-medium text-gray-700"
+                    >
                       Name of Contact Person
                     </label>
                     <div className="mt-1">
@@ -82,8 +97,6 @@ export default function Login() {
                     </div>
                   </div>
 
-                 
-
                   <div>
                     <button
                       type="submit"
@@ -93,24 +106,22 @@ export default function Login() {
                     </button>
                   </div>
                   <div className="text-sm">
-                Already have an account?{" "}
-                <Link href="/login" className="font-medium text-[#00BF63]">
-                  Log In
-                </Link>
-              </div>
+                    Already have an account?{" "}
+                    <Link href="/login" className="font-medium text-[#00BF63]">
+                      Log In
+                    </Link>
+                  </div>
                 </form>
               </div>
             </div>
           </div>
         </div>
         <div className="relative hidden w-0 flex-1 lg:block">
-          <img
-            className="absolute inset-0 h-full w-full object-cover"
-            src="/landing/auth.jpg"
-            alt=""
-          />
+          <div className=" w-full h-screen flex justify-center items-center">
+            <img className=" object-cover w-[50%]" src="/reg.jpg" alt="" />
+          </div>
         </div>
       </div>
     </>
-  )
+  );
 }

@@ -1,28 +1,22 @@
-"use client"
+"use client";
 
 import {
- 
   BellIcon,
   ChartBarIcon,
   DevicePhoneMobileIcon,
   DocumentIcon,
   FolderIcon,
   GiftIcon,
-
   QrCodeIcon,
-
-  SparklesIcon,
-
   UsersIcon,
- 
 } from "@heroicons/react/24/outline";
-import ContactUs from "@/components/ContactUs"
-import AltHero from "@/components/Hero"
-
+import ContactUs from "@/components/ContactUs";
+import AltHero from "@/components/Hero";
 import { FaInstagram } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
-
+import Benefits from "./Benefits";
+import Link from "next/link";
 
 const features = [
   {
@@ -38,15 +32,15 @@ const features = [
     icon: FolderIcon,
   },
   {
-    name: "Mobile Money Donations",
+    name: "Multi-Channel Payment",
     description:
-      "Members can give securely via mobile money by simply scanning a QR code, making giving fast and convenient from their smartphones.",
+      "Integration with popular platforms like M-Pesa, Airtel Money, credit/debit cards, and others",
     icon: DevicePhoneMobileIcon,
   },
   {
-    name: "QR Code Giving",
+    name: "Member Management & Engagement",
     description:
-      "Simplify the donation process by allowing members to scan QR codes to give directly to specific causes or church funds.",
+      "Churches and members can monitor individual giving histories, pledges management, send announcements, reminders, and updates to members in real time.",
     icon: QrCodeIcon,
   },
   {
@@ -56,9 +50,9 @@ const features = [
     icon: ChartBarIcon,
   },
   {
-    name: "Team Management",
+    name: "User-Friendly Interface",
     description:
-      "Assign roles to team members and manage who can create or oversee donation categories and reporting.",
+      "Both congregants and church administrators can easily navigate and use the platform, making adoption and engagement seamless.",
     icon: UsersIcon,
   },
   {
@@ -94,12 +88,6 @@ const metrics = [
     emphasis: "System efficiency",
     rest: "",
   },
-  {
-    id: 4,
-    stat: "12M+",
-    emphasis: "Transactions",
-    rest: "",
-  },
 ];
 const footerNavigation = {
   solutions: [
@@ -115,11 +103,9 @@ const footerNavigation = {
     { name: "API Status", href: "#" },
   ],
   company: [
-    { name: "About", href: "#" },
-    { name: "Blog", href: "#" },
-   
-    
-    { name: "Partners", href: "#" },
+    { name: "Sign In", href: "/login" },
+    { name: "Sign Up", href: "/register" },
+    { name: "Home", href: "/" },
   ],
   legal: [
     { name: "Claim", href: "#" },
@@ -130,24 +116,20 @@ const footerNavigation = {
     {
       name: "Facebook",
       href: "#",
-      icon: FaFacebook
+      icon: FaFacebook,
     },
     {
       name: "Instagram",
       href: "#",
-      icon: FaInstagram
-      ,
+      icon: FaInstagram,
     },
     {
       name: "Twitter",
       href: "#",
-      icon: FaXTwitter
+      icon: FaXTwitter,
     },
-  
   ],
 };
-
-
 
 export default function AltLanding() {
   return (
@@ -159,96 +141,15 @@ export default function AltLanding() {
         {/* Logo Cloud */}
 
         {/* Alternating Feature Sections */}
-        <div className="relative overflow-hidden pt-16 pb-32">
-          <div
-            aria-hidden="true"
-            className="absolute inset-x-0 top-0 h-48 bg-gradient-to-b from-gray-100"
-          />
-          <div className="relative">
-            <div className="lg:mx-auto lg:grid lg:max-w-7xl lg:grid-flow-col-dense lg:grid-cols-2 lg:gap-24 lg:px-8">
-              <div className="mx-auto max-w-xl px-6 lg:mx-0 lg:max-w-none lg:py-16 lg:px-0">
-                <div>
-                  <div>
-                    <span className="flex h-12 w-12 items-center justify-center rounded-md bg-gradient-to-r from-green-600 to-[#083D77]">
-                      <SparklesIcon
-                        className="h-6 w-6 text-white"
-                        aria-hidden="true"
-                      />
-                    </span>
-                  </div>
-                  <div className="mt-6">
-                    <h2 className="text-3xl font-bold tracking-tight text-gray-900">
-                      Streamline Church Giving with Ease
-                    </h2>
-                    <p className="mt-4 text-lg text-gray-500">
-                      Automate tithes and offerings while allowing members to
-                      donate via mobile money with a simple QR code. Track
-                      contributions and manage funds efficiently, ensuring your
-                      church stays on top of its giving efforts.
-                    </p>
-                    <div className="mt-6">
-                      <a
-                        href="#"
-                        className="inline-flex rounded-md border border-transparent bg-gradient-to-r from-green-600 to-[#083d77] bg-origin-border px-4 py-2 text-base font-medium text-white shadow-sm "
-                      >
-                        Get started
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div className="mt-8 border-t border-gray-200 pt-6">
-                  <blockquote>
-                    <div>
-                      <p className="text-base text-gray-500">
-                        &ldquo;This system has transformed our church’s giving.
-                        Members love the convenience, and we can easily manage
-                        and track donations.&rdquo;
-                      </p>
-                    </div>
-                    <footer className="mt-3">
-                      <div className="flex items-center space-x-3">
-                        <div className="flex-shrink-0">
-                          <img
-                            className="h-6 w-6 rounded-full"
-                            src="https://unsplash.com/photos/standing-man-wearing-blue-denim-button-up-jacket-while-holding-microphone-pHb0Ztr2CFE"
-                            alt=""
-                          />
-                        </div>
-                        <div className="text-base font-medium text-gray-700">
-                          Pastor John Sifuna, Church Leader
-                        </div>
-                      </div>
-                    </footer>
-                  </blockquote>
-                </div>
-              </div>
-              <div className="mt-12 sm:mt-16 lg:mt-0">
-                <div className="-mr-48 pl-6 md:-mr-16 lg:relative lg:m-0 lg:h-full lg:px-0">
-                  <img
-                    className="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
-                    src="/landing/auth.jpg"
-                    alt="church"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="mt-24"></div>
-        </div>
+        <Benefits />
 
         {/* Gradient Feature Section */}
-        <div className="bg-gradient-to-r from-green-800 to-[#083D77]">
+        <div id="features" className="bg-gradient-to-r from-green-800 to-[#083D77]">
           <div className="mx-auto max-w-4xl py-16 px-6 sm:pt-20 sm:pb-24 lg:max-w-7xl lg:px-8 lg:pt-24">
             <h2 className="text-3xl font-bold tracking-tight text-white">
-              Simplified Giving for Your Church
+              Tap2Give Features
             </h2>
-            <p className="mt-4 max-w-3xl text-lg text-purple-200">
-              Manage tithes, offerings, and donations effortlessly with our
-              automated giving platform. Set up giving categories, allow mobile
-              money donations via QR codes, and track contributions with
-              ease—all built to enhance church stewardship and member
-              convenience.
-            </p>
+           
             <div className="mt-12 grid grid-cols-1 gap-x-6 gap-y-12 sm:grid-cols-2 lg:mt-16 lg:grid-cols-4 lg:gap-x-8 lg:gap-y-16">
               {features.map((feature) => (
                 <div key={feature.name}>
@@ -298,19 +199,8 @@ export default function AltLanding() {
                   Valuable Metrics
                 </span> */}
               </h2>
-              <p className="mt-3 text-3xl font-bold tracking-tight bg-gradient-to-r from-green-300 to-[#083D77] bg-clip-text text-transparent">
-                About Us
-              </p>
-              <p className="mt-5 text-lg text-gray-300">
-                Tap2Give makes giving to your church a convenient and joyful
-                experience. Our platform provides church members with easy
-                access to various giving categories enabling quick and secure
-                contributions via mobile moey and other supported payment
-                platforms. We are committed to simplifying the giving process,
-                empowering church communities, and supporting a culture of
-                generosity.
-              </p>
-              <div className="mt-12 grid grid-cols-1 gap-y-12 gap-x-6 sm:grid-cols-2">
+
+              <div className="mt-12 grid grid-cols-1 gap-y-12 gap-x-6 sm:grid-cols-3">
                 {metrics.map((item) => (
                   <p key={item.id}>
                     <span className="block text-2xl font-bold text-white">
@@ -334,23 +224,20 @@ export default function AltLanding() {
           <div className="mx-auto max-w-4xl py-16 px-6 sm:py-24 lg:flex lg:max-w-7xl lg:items-center lg:justify-between lg:px-8">
             <h2 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-4xl">
               <span className="block">Ready to get started?</span>
-              <span className="-mb-1 block bg-gradient-to-r from-green-600 to-[#083D77] bg-clip-text pb-1 text-transparent">
-                Get in touch or create an account.
-              </span>
             </h2>
             <div className="mt-6 space-y-4 sm:flex sm:space-y-0 sm:space-x-5">
-              <a
-                href="#"
+              <Link
+                href="/#about"
                 className="flex items-center justify-center rounded-md border border-transparent bg-gradient-to-r from-green-600 to-[#083d77] bg-origin-border px-4 py-3 text-base font-medium text-white shadow-sm hover:from-purple-700 hover:to-indigo-700"
               >
                 Learn more
-              </a>
-              <a
-                href="#"
+              </Link>
+              <Link
+                href="/register"
                 className="flex items-center justify-center rounded-md border border-transparent bg-indigo-50 px-4 py-3 text-base font-medium text-indigo-800 shadow-sm "
               >
                 Get started
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -368,7 +255,7 @@ export default function AltLanding() {
               <div className="md:grid md:grid-cols-2 md:gap-8">
                 <div>
                   <h3 className="text-base font-medium text-gray-900">
-                    Solutions
+                    Benefits
                   </h3>
                   <ul role="list" className="mt-4 space-y-4">
                     {footerNavigation.solutions.map((item) => (
@@ -385,7 +272,7 @@ export default function AltLanding() {
                 </div>
                 <div className="mt-12 md:mt-0">
                   <h3 className="text-base font-medium text-gray-900">
-                    Support
+                    Features
                   </h3>
                   <ul role="list" className="mt-4 space-y-4">
                     {footerNavigation.support.map((item) => (
@@ -404,17 +291,17 @@ export default function AltLanding() {
               <div className="md:grid md:grid-cols-2 md:gap-8">
                 <div>
                   <h3 className="text-base font-medium text-gray-900">
-                    Company
+                    Navigation
                   </h3>
                   <ul role="list" className="mt-4 space-y-4">
                     {footerNavigation.company.map((item) => (
                       <li key={item.name}>
-                        <a
+                        <Link
                           href={item.href}
                           className="text-base text-gray-500 hover:text-gray-900"
                         >
                           {item.name}
-                        </a>
+                        </Link>
                       </li>
                     ))}
                   </ul>
@@ -482,7 +369,7 @@ export default function AltLanding() {
               ))}
             </div>
             <p className="mt-8 text-base text-gray-400 md:order-1 md:mt-0">
-              &copy; {new Date().getFullYear()} Tap To Give, Inc. All rights
+              &copy; {new Date().getFullYear()} Tap2Give, Inc. All rights
               reserved.
             </p>
           </div>
