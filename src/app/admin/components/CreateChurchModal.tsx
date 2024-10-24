@@ -71,7 +71,7 @@ export default function CreateChurchModal() {
                         Add A church
                       </Dialog.Title>
                       <div className="mt-2">
-                       <div className="grid grid-cols-2 gap-5 w-full">
+                       <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 w-full">
                             <AdminInput name="name" label="Church Name" type="text" required={true}/>
                             <AdminInput name="location" label="Church Location" type="text" required={true}/>
                             <AdminInput name="number" label="Phone Number" type="text" required={true}/>
