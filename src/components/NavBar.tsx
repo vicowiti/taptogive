@@ -70,7 +70,7 @@ const NavBar = () => {
               <a href="#">
                 <span className="sr-only">Tap to Give</span>
                 <img
-                  className="h-auto w-20 sm:h-10"
+                  className="h-auto w-12 lg:w-20 sm:h-10"
                   src="/logo/logo.png"
                   alt=""
                 />

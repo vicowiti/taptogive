@@ -1,3 +1,5 @@
+import CreateChurchModal from "./CreateChurchModal";
+
 const people = [
   {
     name: "Citam",
@@ -6,7 +8,7 @@ const people = [
     phone: "+254788908777",
     contact: "Joe Doe",
     createdAt: "23/10/2024",
-    status: "Active"
+    status: "Active",
   },
   // More people...
 ];
@@ -22,12 +24,7 @@ export default function ChurchTables() {
           </p>
         </div>
         <div className="mt-4 sm:mt-0 sm:ml-16 sm:flex-none">
-          <button
-            type="button"
-            className="inline-flex items-center justify-center rounded-md border border-transparent bg-[#083D77] px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-[#083D77] focus:outline-none 2   sm:w-auto"
-          >
-            Add Church
-          </button>
+          <CreateChurchModal />
         </div>
       </div>
       <div className="mt-8 flex flex-col">
@@ -73,14 +70,13 @@ export default function ChurchTables() {
                     >
                       Date Created
                     </th>
-                     <th
+                    <th
                       scope="col"
                       className="px-3 py-3.5 text-left text-sm font-bold text-gray-900"
                     >
                       Status
                     </th>
                   </tr>
-                 
                 </thead>
                 <tbody className="bg-white">
                   {people.map((person, personIdx) => (
@@ -109,7 +105,6 @@ export default function ChurchTables() {
                       <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
                         {person.status}
                       </td>
-                      
                     </tr>
                   ))}
                 </tbody>
