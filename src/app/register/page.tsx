@@ -6,19 +6,21 @@ export default function Login() {
       <div className="flex min-h-screen">
         <div className="flex flex-1 flex-col justify-center py-12 px-4 sm:px-6 lg:flex-none lg:px-20 xl:px-24">
           <div className="mx-auto w-full max-w-sm lg:w-96">
+            <div>
             <Link href="/">
               <img
                 className="h-auto w-32"
                 src="/logo/logo.png"
                 alt="TapToGive"
               />
+              </Link>
               <h2 className="mt-6 text-3xl text-center font-bold tracking-tight text-gray-900">
                 Ready to experience the future of church giving?
               </h2>
-              <h2 className="mt-2 text-3xl text-center font-bold tracking-tight text-gray-900">
+              <h2 className="mt-2 text-2xl text-center font-bold tracking-tight text-green-600">
                 Sign up now!
               </h2>
-            </Link>
+            </div>
 
             <div className="mt-8">
               <div className="mt-6">

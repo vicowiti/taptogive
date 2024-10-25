@@ -63,7 +63,7 @@ export default function CreateChurchModal() {
                         aria-hidden="true"
                       />
                     </div>
-                    <div className="mt-3 text-center w-full sm:mt-0 sm:ml-4 sm:text-left">
+                    <div className="mt-3 text-cente w-full sm:mt-0 sm:ml-4 sm:text-left">
                       <Dialog.Title
                         as="h3"
                         className="text-lg font-bold leading-6 text-gray-900"

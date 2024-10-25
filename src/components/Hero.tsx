@@ -6,7 +6,7 @@ import AOSComponent from "./AOS";
 export default function AltHero() {
   return (
     <AOSComponent>
-      <div className="isolate bg-white">
+      <div className="isolate relative bg-white pt-[100px]">
         <div className="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]">
           <svg
             className="relative left-[calc(50%-11rem)] -z-10 h-[21.1875rem] max-w-none -translate-x-1/2 rotate-[30deg] sm:left-[calc(50%-30rem)] sm:h-[42.375rem]"
@@ -37,7 +37,7 @@ export default function AltHero() {
         <main>
           <div className="relative px-6 lg:px-8">
             <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
-              <div className="text-center">
+              <div className="text-center z-10">
                 <h1
                   className="text-7xl font-extrabold tracking-wide text-gray-900 sm:text-8xl"
                   data-aos="fade-up"

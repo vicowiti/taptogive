@@ -3,7 +3,7 @@ import AltLanding from "@/components/AltLanding";
 
 export default function Home() {
   return (
-    <div>
+    <div className="relative">
       <AltLanding />
     </div>
   );

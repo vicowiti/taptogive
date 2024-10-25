@@ -91,10 +91,9 @@ const metrics = [
 ];
 const footerNavigation = {
   solutions: [
-    { name: "Analytics", href: "#" },
-    { name: "Bulk SMS", href: "#" },
-    { name: "Automations", href: "#" },
-    { name: "Insights", href: "#" },
+    { name: "Tap2Give Features", href: "/#features" },
+    { name: "Benefits to Churches", href: "#" },
+   
   ],
   support: [
     { name: "Pricing", href: "#" },
@@ -105,7 +104,8 @@ const footerNavigation = {
   company: [
     { name: "Sign In", href: "/login" },
     { name: "Sign Up", href: "/register" },
-    { name: "Home", href: "/" },
+    { name: "FAQ", href: "/" },
+    { name: "Contact Us", href: "/#contact" },
   ],
   legal: [
     { name: "Claim", href: "#" },
