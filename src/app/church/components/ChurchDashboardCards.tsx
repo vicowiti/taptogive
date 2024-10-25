@@ -1,4 +1,4 @@
-import { ArrowDownIcon, ArrowUpIcon } from '@heroicons/react/20/solid'
+
 import { CursorArrowRaysIcon, EnvelopeOpenIcon, UsersIcon } from '@heroicons/react/24/outline'
 
 const stats = [
@@ -9,9 +9,6 @@ const stats = [
    { id: 5, name: 'YTD Pledges', stat: 'KES 52K', icon: CursorArrowRaysIcon, change: '8%', changeType: 'increase', bg:"#da94fd" },
 ]
 
-function classNames(...classes:string[]) {
-  return classes.filter(Boolean).join(' ')
-}
 
 export default function ChurchDashboardCards() {
   return (
