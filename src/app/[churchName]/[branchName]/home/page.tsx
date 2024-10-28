@@ -8,10 +8,7 @@ const page = ({params}:PageProps) => {
     <LoggedLayout churchName={params.churchName} branchName={params.branchName}>
         <div>
             <LoggedHeader churchName={params.churchName} branchName={params.branchName}/>
-            <div className="h-[500px]"/>
-            <div className="h-[500px]"/>
-            <div className="h-[500px]"/>
-            <div className="h-[500px]"/><div className="h-[500px]"/><div className="h-[500px]"/><div className="h-[500px]"/><div className="h-[500px]"/><div className="h-[500px]"/><div className="h-[500px]"/><div className="h-[500px]"/><div className="h-[500px]"/><div className="h-[500px]"/>
+         
         </div>
 
     </LoggedLayout>
