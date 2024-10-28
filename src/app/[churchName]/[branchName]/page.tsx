@@ -1,7 +1,7 @@
 
 import React from 'react'
 import { PageProps } from '../../../../.next/types/app/layout';
-import LoggedLayout from '../components/LoggedUser';
+
 import Carousel from '../components/Carousel';
 
 const page = ({params}:PageProps) => {
@@ -23,7 +23,7 @@ const page = ({params}:PageProps) => {
 
         </div>
         <div>
-            <p className="text-xs text-center mt-3">Don't have an account? <span className="underline">Register</span></p>
+            <p className="text-xs text-center mt-3">New Here? <span className="underline">Register</span></p>
         </div>
       </div>
 
