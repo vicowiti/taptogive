@@ -48,7 +48,7 @@ const LoggedLayout: React.FC<LayoutProps> = (props) => {
           </defs>
         </svg>
       </div>
-      
+
       <main className="flex-1 p-4 overflow-y-auto">{props.children}</main>
       <nav className="flex justify-around bg-gray-100 py-2 border-t border-gray-300">
         <button
@@ -60,8 +60,8 @@ const LoggedLayout: React.FC<LayoutProps> = (props) => {
               : ""
           } `}
         >
-          <FaUser size={24} />
-          <span className="text-xs">Profile</span>
+          <FaUser size={20} />
+          <span className="text-[10px]">Profile</span>
         </button>
         <button
           onClick={() => handleNavigation("/home")}
@@ -72,8 +72,8 @@ const LoggedLayout: React.FC<LayoutProps> = (props) => {
               : ""
           }`}
         >
-          <FaHome size={24} />
-          <span className="text-xs">Home</span>
+          <FaHome size={20} />
+          <span className="text-[10px]">Home</span>
         </button>
         <button
           // onClick={() => handleNavigation("/history")}
@@ -85,7 +85,7 @@ const LoggedLayout: React.FC<LayoutProps> = (props) => {
           } `}
         >
           <BottomSheet />
-          <span className="text-xs">More</span>
+          <span className="text-[10px]">More</span>
         </button>
       </nav>
     </div>

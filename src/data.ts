@@ -5,15 +5,36 @@ export const categories = [
   },
   {
     id: 2,
-    name: "Tithe",
+    name: "Building",
   },
   {
     id: 3,
-    name: "Pledge",
+    name: "Wellfare",
   },
   {
     id: 4,
     name: "Donation",
+  },
+  
+];
+
+
+export const sheet = [
+  {
+    id: 1,
+    name: "Reports",
+  },
+  {
+    id: 2,
+    name: "Polls",
+  },
+  {
+    id: 3,
+    name: "Meetings",
+  },
+  {
+    id: 4,
+    name: "Tithe",
   },
   
 ];
