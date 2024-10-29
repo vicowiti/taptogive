@@ -1,18 +1,20 @@
-"use client"
+"use client";
 import React, { ReactNode } from "react";
 import { useRouter } from "next/navigation";
-import { FaHome, FaHistory, FaUser } from "react-icons/fa";
+import { FaHome, FaUser } from "react-icons/fa";
 import { usePathname } from "next/navigation";
+import BottomSheet from './BottomSheet';
+
 
 interface LayoutProps {
   children: ReactNode;
-  churchName?:string
-  branchName?:string
+  churchName?: string;
+  branchName?: string;
 }
 
 const LoggedLayout: React.FC<LayoutProps> = (props) => {
   const router = useRouter();
-   const pathname = usePathname()
+  const pathname = usePathname();
 
   const handleNavigation = (path: string) => {
     router.push(`/${props.churchName}/${props.branchName}${path}`);
@@ -46,11 +48,21 @@ const LoggedLayout: React.FC<LayoutProps> = (props) => {
           </defs>
         </svg>
       </div>
-      <div className="w-full flex justify-center items-center mt-5">
-        <img src="/logo/logo.png" className="w-[35%] lg:w-[10%]" alt="logo" />
-      </div>
+      
       <main className="flex-1 p-4 overflow-y-auto">{props.children}</main>
       <nav className="flex justify-around bg-gray-100 py-2 border-t border-gray-300">
+        <button
+          onClick={() => handleNavigation("/profile")}
+          className={`flex flex-col items-center text-gray-600 ${
+            pathname ===
+            "/" + props.churchName + "/" + props.branchName + "/profile"
+              ? "text-green-600"
+              : ""
+          } `}
+        >
+          <FaUser size={24} />
+          <span className="text-xs">Profile</span>
+        </button>
         <button
           onClick={() => handleNavigation("/home")}
           className={`flex flex-col items-center text-gray-600 ${
@@ -64,7 +76,7 @@ const LoggedLayout: React.FC<LayoutProps> = (props) => {
           <span className="text-xs">Home</span>
         </button>
         <button
-          onClick={() => handleNavigation("/history")}
+          // onClick={() => handleNavigation("/history")}
           className={`flex flex-col items-center text-gray-600 ${
             pathname ===
             "/" + props.churchName + "/" + props.branchName + "/history"
@@ -72,20 +84,8 @@ const LoggedLayout: React.FC<LayoutProps> = (props) => {
               : ""
           } `}
         >
-          <FaHistory size={24} />
-          <span className="text-xs">History</span>
-        </button>
-        <button
-          onClick={() => handleNavigation("/profile")}
-          className={`flex flex-col items-center text-gray-600 ${
-            pathname ===
-            "/" + props.churchName + "/" + props.branchName + "/profile"
-              ? "text-green-600"
-              : ""
-          } `}
-        >
-          <FaUser size={24} />
-          <span className="text-xs">Profile</span>
+          <BottomSheet />
+          <span className="text-xs">More</span>
         </button>
       </nav>
     </div>
