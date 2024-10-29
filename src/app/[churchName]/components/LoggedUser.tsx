@@ -50,7 +50,7 @@ const LoggedLayout: React.FC<LayoutProps> = (props) => {
       </div>
 
       <main className="flex-1 p-4 overflow-y-auto">{props.children}</main>
-      <nav className="flex justify-around bg-gray-100 py-2 border-t border-gray-300">
+      <nav className="flex z-50 justify-around bg-gray-100 py-2 border-t border-gray-300">
         <button
           onClick={() => handleNavigation("/profile")}
           className={`flex flex-col items-center text-gray-600 ${
