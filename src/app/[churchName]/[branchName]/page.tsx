@@ -21,7 +21,9 @@ const router = useRouter();
           <img src="/logo/logo.png" className="w-[35%] lg:w-[10%]" alt="logo" />
         </div>
         {/* Church logo */}
-        <div></div>
+       <div className="w-full flex justify-center items-center mt-2">
+          <img src="/churchlogo.png" className="w-[35%] lg:w-[10%]" alt="logo" />
+        </div>
 
         <div className="mt-10 px-5 lg:px-10">
           <button
